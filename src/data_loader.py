@@ -13,7 +13,7 @@ from sklearn.model_selection import train_test_split
 import tensorflow as tf
 
 # PyTorch DataLoader for MNIST
-def get_pytorch_dataloader(batch_size=64, data_dir='../data', download=True):
+def get_pytorch_dataloader(batch_size=64, data_dir='./data', download=True):
     """
     Returns a PyTorch DataLoader for the MNIST dataset.
     """
