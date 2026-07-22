@@ -1,4 +1,5 @@
 # Import required packages
+import os
 from datetime import datetime
 
 import torch
@@ -84,4 +85,7 @@ print(f"Accuracy: {100 * correct / total:.2f}%")
 # Export the trained model
 print("Exporting model...") # Visualize user what is happening
 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-torch.save(model.state_dict(), f"./pytorch_cnn_{timestamp}.pth")
+save_dir = os.path.dirname(__file__)
+torch.save(model.state_dict(), f"{save_dir}/pytorch_cnn_{timestamp}.pth")
+
+print(f"Model exported as pytorch_cnn_{timestamp}.pth in {save_dir}.")
